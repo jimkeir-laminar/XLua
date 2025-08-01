@@ -48,7 +48,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: yes
+          fetch-depth: 0
+          submodules: recursive
       - name: Setup Credentials
         uses: apple-actions/import-codesign-certs@v1
         with: 
@@ -73,7 +74,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true
+          fetch-depth: 0
+          submodules: recursive
 
       - name: Build
         run: |
