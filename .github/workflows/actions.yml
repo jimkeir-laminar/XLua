@@ -30,7 +30,7 @@ jobs:
         move Release\plugins\win_x64/xlua.xpl jenkins\build_products\xlua_win.xpl
       
     - name: Archive production artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: xlua_win
         path: |
@@ -45,7 +45,7 @@ jobs:
       APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: yes
       - name: Setup Credentials
@@ -57,7 +57,7 @@ jobs:
         run: |
           ./jenkins_driver.sh
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: xlua_mac
           path: |
@@ -70,7 +70,7 @@ jobs:
         image: ghcr.io/x-plane/xlua_builder:latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
 
@@ -78,7 +78,7 @@ jobs:
         run: |
           ./jenkins_driver.sh
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: xlua_lin
           path: |
