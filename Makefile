@@ -9,7 +9,12 @@ SOURCES = \
 	src/xpcommands.cpp \
 	src/xpdatarefs.cpp \
 	src/xpfuncs.cpp \
-	src/xptimers.cpp
+	src/xptimers.cpp \
+	imgui/imgui.cpp \
+	imgui/imgui_demo.cpp \
+	imgui/imgui_draw.cpp \
+	imgui/imgui_tables.cpp \
+	imgui/imgui_widgets.cpp
 
 LIBS = -lluajit
 

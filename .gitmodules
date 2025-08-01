@@ -2,3 +2,9 @@
 	path = luajit
 	url = https://luajit.org/git/luajit.git
 	branch = v2.1
+[submodule "imgui_lua_bindings"]
+	path = imgui_lua_bindings
+	url = ../../casssoft/imgui_lua_bindings.git
+[submodule "imgui"]
+	path = imgui
+	url = ../../ocornut/imgui.git
